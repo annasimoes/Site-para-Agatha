@@ -1,0 +1,138 @@
+:root {
+    --rosa-bg: #fff0f5;
+    --rosa-claro: #fac8c3;
+    --rosa-pastel: #ffd1dc;
+    --rosa-destaque: #ffb6c1;
+    --rosa-escuro: #ba5f88;
+    --texto: #374151;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+    body {
+  background: linear-gradient(-45deg, #fff0f5, #ffe4e1, #ffd1dc);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% }
+  50% { background-position: 100% }
+  100% { background-position: 0% }
+}
+
+/* HEADER */
+header {
+    background: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+header h1 {
+    color: var(--rosa-escuro);
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--texto);
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: var(--rosa-escuro);
+}
+
+/* HERO */
+.hero {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #ffd1dc, #ffe4e1);
+}
+
+.hero h2 {
+    font-size: 36px;
+}
+
+.hero p {
+    margin: 10px 0 20px;
+}
+
+/* BOTÃO */
+.btn {
+    background: var(--rosa-destaque);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--rosa-escuro);
+    transform: scale(1.05);
+}
+
+/* SEÇÕES */
+section {
+    padding: 50px 40px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* BOTÕES (cards transformados) */
+.card-btn {
+    background: white;
+    border: 1px solid #fbcfe8;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-btn h3 {
+    color: var(--rosa-escuro);
+    margin-bottom: 10px;
+}
+
+.card-btn:hover {
+    transform: translateY(-5px);
+    background: var(--rosa-claro);
+}
+
+.card-btn:active {
+    transform: scale(0.97);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--rosa-claro);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 26px;
+    }
+}
